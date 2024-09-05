@@ -13,10 +13,15 @@ import Home from './components/Home/Home';
 
 
 const router = createBrowserRouter([
+
   {
     path: "/",
     element: <Root></Root>,
     children: [
+      {
+        path: '/',
+        element : <Home></Home>
+      },
       {
         path: '/login',
         element : <Login></Login>
@@ -27,10 +32,8 @@ const router = createBrowserRouter([
       }
     ]
   },
-  {
-    path: '/',
-    element : <Home></Home>
-  }
+
+
 ]);
 
 createRoot(document.getElementById('root')).render(
