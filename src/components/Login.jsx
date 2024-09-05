@@ -11,7 +11,7 @@ const Login = () =>{
 
   return(
     <div className="">
-      <h1 className="text-center text-2xl text-black font-bold">Register Now!</h1>
+      <h1 className="text-center text-2xl text-black font-bold">Login Now!</h1>
     <div className="hero-content flex-col lg:flex-row-reverse ml-12">
      <div className="card bg-slate-600 w-full max-w-sm shrink-0 shadow-2xl">
      <form onSubmit={handleLogin} className="card-body">

@@ -4,15 +4,23 @@ const Register = () =>{
 
   const handleRegister = e => {
          e.preventDefault();
+         const name = e.target.name.value;
          const email = e.target.email.value;
          const password = e.target.password.value;
-         console.log(email , password);
+         console.log(name, email , password);
           }
     return(
       <div className="">
+      <h1 className="text-center text-2xl text-black font-bold">Register Now!</h1>
         <div className="hero-content flex-col lg:flex-row-reverse">
-         <div className="card bg-slate-600 w-full max-w-sm shrink-0 shadow-2xl">
+         <div className="card bg-slate-600 w-full max-w-sm shrink-0 shadow-2xl ml-12">
          <form onSubmit={handleRegister} className="card-body">
+         <div className="form-control">
+             <label className="label">
+             <span className="label-text text-white">Name</span>
+             </label>
+             <input type="text" placeholder="name" name="name" className="input input-bordered" required />
+           </div>
            <div className="form-control">
              <label className="label">
              <span className="label-text text-white">Email</span>
@@ -29,7 +37,7 @@ const Register = () =>{
           </label>
         </div>
         <div className="form-control mt-2">
-          <button className="btn btn-success">Login</button>
+          <button className="btn btn-success">Sign Up</button>
         </div>
         <p className="text-yellow-400 italic text-center">Have an account? <Link to="/login"><button className="btn btn-link"><span className="text-pink-400">Login</span></button></Link> </p>
       </form>
